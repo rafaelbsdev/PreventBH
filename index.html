@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PreventBRs</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="floating-panel">
+      <p>HeatMap Options</p>
+      <button id="toggle-heatmap">Toggle Heatmap</button>
+      <button id="show-markers">Show Markers</button>
+      <button id="hide-markers">Hide Markers</button>
+      <button id="change-gradient">Change gradient</button>
+      <button id="change-opacity">Change opacity</button>
+      <input type="file" id="uploadFile" accept=".csv">
+      <button id="uploadConfirm">Upload File</button>
+      <div id="floating-panel1">
+
+        <head>Resutados:</head>
+        <p id="total-acidentes">Total de acidentes:</p>
+        <p id="total-mortes">Total de mortes:</p>
+
+      </div>
+    </div>
+    <div id="map"></div>
+  </div>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1DXsoCuPbtasOXKmTiXh5NVwj-Y_nUUM&callback=initMap&libraries=visualization&v=weekly" defer></script>
+  <script src="./script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.2/papaparse.min.js"></script>
+
+  <footer id="footer">
+    <a href="https://dados.pbh.gov.br/dataset/relacao-de-ocorrencias-de-acidentes-de-transito-com-vitima">Fonte das Informações;</a><br>
+    <a href="https://github.com/rafaelbsdev/PreventBH">Código Fonte;</a>
+  </footer>
+</body>
+
+</html>
